@@ -1,5 +1,16 @@
 @charset "UTF-8";
 
+header{
+    text-align: center;
+    padding: 20px;
+    margin: 10px;
+}
+
+section{
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .container .card {
     width: 300px; /* Define uma largura fixa para o cartão */
     height: 300px; /* Define uma altura fixa para o cartão */
