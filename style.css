@@ -1,5 +1,8 @@
 @charset "UTF-8";
 
+body{
+    background-color:antiquewhite;
+}
 header{
     text-align: center;
     padding: 20px;
@@ -7,17 +10,23 @@ header{
 }
 
 section{
+    align-items: center;
+    background-color: #333;
+    min-width: 500px;
+    max-width: 100%;
+    min-height: 500px;
     display: flex;
     flex-wrap: wrap;
+    gap: 70px;
 }
 
-.container .card {
+.caixa .card {
     width: 300px; /* Define uma largura fixa para o cartão */
     height: 300px; /* Define uma altura fixa para o cartão */
     perspective: 1000px;
 }
 
-.container .card .face.face1 {
+.caixa .card .face.face1 {
     position: relative;
     background: #333333a9;
     width: 100%;
@@ -29,17 +38,18 @@ section{
     transition: 0.5s;
 }
 
-.container .card:hover .face.face1 {
+.caixa .card:hover .face.face1 {
     background: #ff005580;
     transform: translateY(-5px);
 }
 
-.container .card .face.face1 .icon img {
+.caixa .card .face.face1 .icon img {
+    border-radius: 5px;
     width: 300px; /* Define a largura desejada para a imagem */
     height: 300px; /* Define a altura desejada para a imagem */
 }
 
-.container .card .face.face2 {
+.caixa .card .face.face2 {
     border-radius: 5px;
     position: absolute;
     top: 0;
@@ -56,21 +66,22 @@ section{
     box-shadow: 0 7px 20px rgba(0, 0, 0, 0.8);
     transform: translateY(-0%); /* esconde o face2 atras do face1 */
     transition: 0.5s;
+    
 }
 
-.container .card:hover .face.face2 {
-    transform: translateY(100px); /* Quando passa o mouse, desce */
+.caixa .card:hover .face.face2 {
+    transform: translateY(70px); /* Quando passa o mouse, desce */
 }
 
-.container .card .face.face2 .content {
+.caixa .card .face.face2 .content {
     width: 100%;
     text-align: center; /* Opcional: centraliza o conteúdo horizontalmente */
 }
 
-.container .card .face.face2 button {
+.caixa .card .face.face2 button {
     padding: 10px 20px;
     background-color: #ff0057;
-    color: black;
+    color: white;
     text-wrap: wrap;
     border: none;
     border-radius: 5px;
@@ -79,7 +90,7 @@ section{
     transition: background-color 0.3s;
 }
 
-.container .card .face.face2 button:hover .p {
+.caixa .card .face.face2 button:hover .p {
     border-bottom: 5px solid #333;
     background-color: #e6004b; /* Cor mais escura ao passar o mouse */
 }

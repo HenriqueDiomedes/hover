@@ -11,7 +11,7 @@ function sendToWhatsApp(buttonElement) {
     console.log("Mensagem:", buttonMessages[botaoIndex]);  
     
     const recipientNumber = ""; // Número do destinatário no WhatsApp
-    const message = encodeURIComponent(`Olá, ${buttonMessages[botaoIndex]}, que horas você vem me pegar?`); // A mensagem que será enviada
+    const message = encodeURIComponent(`Olá, que horas você vem me pegar?`); // A mensagem que será enviada
     const whatsappUrl = `https://wa.me/${recipientNumber}?text=${message}`; // URL de envio para WhatsApp
     
     window.open(whatsappUrl, '_blank'); // Abre o WhatsApp para enviar a mensagem
